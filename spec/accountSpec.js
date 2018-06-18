@@ -15,4 +15,12 @@ describe('Account', function(){
       expect(account.balance).toEqual(100.10);
     })
   });
+
+  describe('#withdraw', function(){
+    it('Balance will equal 220.20 when 80.30 is the argument', function(){
+      account.deposit(300.50);
+      account.withdraw(80.30);
+      expect(account.balance).toEqual(220.20);
+    });
+  });
 });
