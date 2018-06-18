@@ -10,10 +10,10 @@ describe('AccountHistory', function(){
   });
 
   describe('#_dateFormat', function(){
-    it('converts - into /',{
-      expect(history._dateFormat("20-12-1990").toEqual("20/12/1990");
-    }
-  })
+    it('converts - into /',function(){
+      expect(history._dateFormat("20-12-1990")).toEqual("20/12/1990");
+    });
+  });
 
   describe('#_add', function(){
     it('Adds a new transaction object to the log', function(){

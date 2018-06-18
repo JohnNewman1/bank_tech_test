@@ -3,7 +3,7 @@ function AccountHistory(){
 }
 
 AccountHistory.prototype._add = function(credit, debit, date, balance){
-  var formatDate = _dateFormat(date)
+  var formatDate = this._dateFormat(date)
   var transaction = {date: formatDate, credit: credit, debit: debit, balance: balance}
   this.log.push(transaction)
 }
