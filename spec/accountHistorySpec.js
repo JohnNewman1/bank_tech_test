@@ -5,7 +5,7 @@ describe('AccountHistory', function(){
     history = new AccountHistory();
   });
 
-  it('Starts with empty array'. function(){
+  it('Starts with empty array', function(){
     expect(history.log).toEqual([]);
   });
 });

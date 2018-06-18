@@ -1,0 +1,3 @@
+function AccountHistory(){
+  this.log = [];
+}
