@@ -24,7 +24,11 @@ describe('PrintStatement', function(){
   })
 
   describe('#_spaceChecker', function(){
-    expect(statement._spaceChecker(statement.log)).toEqual({{ date: "10/11/2012", credit: " 100.00", debit: "", balance: 200.00 },
-      { date: "05/01/2010", credit: "", debit: " 100.00", balance: 100.00 }})
+
+    it('adds spaces to credit and debit if they have values',function(){
+      statement._spaceChecker()
+      expect(statement.log).toEqual([{ date: "10/11/2012", credit: "100.00 ", debit: "", balance: 200.00 },
+        { date: "05/01/2010", credit: "", debit: "100.00 ", balance: 100.00 }])
+    })
   })
 });
