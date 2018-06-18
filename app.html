@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ban</title>
+  <script src="src/accountHistory.js"></script>
+  <script src="src/PrintStatement.js"></script>
+  <script src="src/account.js"></script>
+</head>
+  <script>
+  var ahistory = new AccountHistory();
+  var output = new PrintStatement(ahistory);
+  var account = new Account(ahistory);
+  </script>
+<body>
+  <h1> Bank App </h1>
+
+  <p>Open the Console to use App:</p><br/><br/>
+
+  <p>Balance will start at zero, to view the balance enter account.balance into console</P>
+
+  <p>To deposit funds enter the following command account.balance(amount, date).
+    The date must be entered in the following format: DD-MM-YYYY</p>
+
+  <p>To withdraw funds enter the following command account.withdraw(amount, date).
+    The date must be entered in the following format: DD-MM-YYYY</p>
+
+  <p>To print your transaction history enter the following command output.print(). </p>
+
+  <p>To reset the app refresh the page</p>
+
+</body>
+</html>
