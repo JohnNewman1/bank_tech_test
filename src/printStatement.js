@@ -4,5 +4,8 @@ function PrintStatement(history){
 
 PrintStatement.prototype.print = function() {
   console.log("date || credit || debit || balance\n");
-  console.log("")
+    this.log.forEach(function (statement){
+      console.log(statement.date + " ||" + statement.credit + " || " + statement.debit + " ||" + statement.balance)
+    });
+
 }
