@@ -22,5 +22,10 @@ describe('Account', function(){
       account.withdraw(80.30);
       expect(account.balance).toEqual(220.20);
     });
+    it('Throws error if insufficient funds in account', function(){
+      expect(function(){
+        account.withdraw(100.00);
+    }).toThrow('Insufficient funds available');
+    });
   });
 });
