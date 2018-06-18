@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Specifications</title>
+  <script src="src/accountHistory.js"></script>
+  <script src="src/PrintStatement.js"></script>
+  <script src="src/account.js"></script>
+</head>
+  <script>
+  var ahistory = new AccountHistory();
+  var output = new PrintStatement(ahistory);
+  var account = new Account(ahistory);
+  account.deposit(1000, "10-01-2012");
+  account.deposit(2000, "13-01-2012");
+  account.withdraw(500, "14-01-2012");
+  output.print();
+  </script>
+<body>
+  Open the Console to see output of specifications <br/><br/>
+
+  The following Javascript was used:<br/><br/>
+
+  var ahistory = new AccountHistory();<br/>
+  var output = new PrintStatement(ahistory);<br/>
+  var account = new Account(ahistory);<br/>
+  account.deposit(1000, "10-01-2012");<br/>
+  account.deposit(2000, "13-01-2012");<br/>
+  account.withdraw(500, "14-01-2012");<br/>
+  output.print();
+
+</body>
+</html>
