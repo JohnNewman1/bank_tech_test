@@ -8,5 +8,6 @@ Account.prototype.deposit = function(amount){
 }
 
 Account.prototype.withdraw = function(amount){
+  if (this.balance < amount) throw "Insufficient funds available"; 
   this.balance -= amount;
 }
