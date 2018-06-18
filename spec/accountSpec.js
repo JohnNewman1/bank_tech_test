@@ -26,6 +26,11 @@ describe('Account', function(){
 
   describe('#withdraw', function(){
 
+    it('HistoryLog method add method is called with correct arguments', function(){
+      account.deposit(100.00, "20-12-1990");
+      expect(account.historyLog._add).toHaveBeenCalledWitH(100.00, "", "20-12-1990", 100.00)
+    })
+
     it('Balance will equal 220.20 when 80.30 is the argument', function(){
       account.deposit(300.50, "10-12-2012");
       account.withdraw(80.30, "10-12-2012");
