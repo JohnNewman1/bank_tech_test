@@ -6,7 +6,8 @@ function Account(history){
 
 Account.prototype.deposit = function(amount, date){
   this.balance += amount;
-  
+  this.historyLog._add(amount, "", date, this.balance);
+
 }
 
 Account.prototype.withdraw = function(amount, date){

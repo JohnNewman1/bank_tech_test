@@ -28,7 +28,7 @@ describe('Account', function(){
 
     it('HistoryLog method add method is called with correct arguments', function(){
       account.deposit(100.00, "20-12-1990");
-      expect(account.historyLog._add).toHaveBeenCalledWitH(100.00, "", "20-12-1990", 100.00)
+      expect(account.historyLog._add).toHaveBeenCalledWith(100.00, "", "20-12-1990", 100.00)
     })
 
     it('Balance will equal 220.20 when 80.30 is the argument', function(){
