@@ -1,9 +1,16 @@
 describe('Account', function(){
   var account;
+  var history;
 
   beforeEach(function(){
-    account = new Account();
+    history = jasmine.createSpyObj('history', ['_add']);
+    account = new Account(history);
+
   });
+
+  it('takes a argument for accounthistory and saves it', function(){
+    expect(account.historyLog).toEqual(history);
+  })
 
   it('Has a balance that starts with 0.00', function(){
     expect(account.balance).toEqual(0.00);
