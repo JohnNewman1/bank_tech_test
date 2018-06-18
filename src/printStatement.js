@@ -3,9 +3,10 @@ function PrintStatement(history){
 };
 
 PrintStatement.prototype.print = function() {
+  this._spaceChecker();
   console.log("date || credit || debit || balance\n");
   this.log.forEach(function(statement){
-    console.log(statement.date + " || " + statement.credit + "|| " + statement.debit + "||" + statement.balance)
+    console.log(statement.date + " || " + statement.credit + "|| " + statement.debit + "|| " + Number(statement.balance).toFixed(2) + "\n")
   });
 }
 

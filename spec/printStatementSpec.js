@@ -19,9 +19,11 @@ describe('PrintStatement', function(){
 
     it('console logs the history log in the correct format', function(){
       statement.print();
-      expect(console.log).toHaveBeenCalledWith("10/11/2012 || 100.00 || || 200.00\n05/01/2010 || || 100.00 || 100.00\n")
+      expect(console.log).toHaveBeenCalledWith('date || credit || debit || balance\n');
+      expect(console.log).toHaveBeenCalledWith('10/11/2012 || 100.00 || || 200.00\n');
+      expect(console.log).toHaveBeenCalledWith('05/01/2010 || || 100.00 || 100.00\n');
     })
-  })
+  });
 
   describe('#_spaceChecker', function(){
 
