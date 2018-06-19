@@ -5,7 +5,7 @@ function PrintStatement(history){
 
 PrintStatement.prototype.print = function() {
   console.log("date || credit || debit || balance\n");
-  this.history.log.forEach(function(statement){
+  this.history.log.reverse().forEach(function(statement){
     this._format(statement)
     console.log(this.transaction);
   }.bind(this));
