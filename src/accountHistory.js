@@ -2,7 +2,7 @@ function AccountHistory(){
   this.log = [];
 }
 
-AccountHistory.prototype._add = function(credit, debit, date, balance){
+AccountHistory.prototype.add = function(credit, debit, date, balance){
   var formatDate = this._dateFormat(date)
   var transaction = {date: formatDate, credit: credit, debit: debit, balance: balance}
   this.log.push(transaction)

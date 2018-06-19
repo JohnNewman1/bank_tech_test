@@ -24,13 +24,4 @@ describe('PrintStatement', function(){
       expect(console.log).toHaveBeenCalledWith('05/01/2010 || || 100.00 || 100.00\n');
     })
   });
-
-  describe('#_spaceChecker', function(){
-
-    it('adds spaces to credit and debit if they have values',function(){
-      statement._spaceChecker()
-      expect(statement.log).toEqual([{ date: "10/11/2012", credit: "100.00 ", debit: "", balance: 200.00 },
-        { date: "05/01/2010", credit: "", debit: "100.00 ", balance: 100.00 }])
-    });
-  });
 });
