@@ -52,6 +52,16 @@ account.deposit(amount, DD-MM-YYYY);
 account.withdraw(amount, DD-MM-YYYY);
 ```
 
+3. To check the balance
+```
+account.balance;
+```
+
+4. To print transaction history
+```
+output.print();
+```
+
 
 ### Testing
 
