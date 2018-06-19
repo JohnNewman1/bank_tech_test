@@ -5,7 +5,6 @@ describe('Account', function(){
   beforeEach(function(){
     history = jasmine.createSpyObj('history', ['_add']);
     account = new Account(history);
-
   });
 
   it('takes a argument for accounthistory and saves it', function(){

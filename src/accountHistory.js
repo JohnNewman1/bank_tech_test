@@ -11,5 +11,4 @@ AccountHistory.prototype._add = function(credit, debit, date, balance){
 AccountHistory.prototype._dateFormat = function(date){
   var formatedDate = date.replace(/-/g, "/");
   return formatedDate;
-
 }
