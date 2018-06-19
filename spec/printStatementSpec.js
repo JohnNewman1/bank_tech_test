@@ -4,8 +4,8 @@ describe('PrintStatement', function(){
 
   beforeEach(function(){
     history = jasmine.createSpy("history")
-    history.log = [{ date: "10/11/2012", credit: 100.00, debit: "", balance: 200.00 },
-                  { date: "05/01/2010", credit: "", debit: 100.00, balance: 100.00 }];
+    history.log = [{ date: "10/11/2012", credit: 100.00, debit: "", balance: 200.00, type: "credit" },
+                  { date: "05/01/2010", credit: "", debit: 100.00, balance: 100.00, type: "debit" }];
     statement = new PrintStatement(history);
     console.log = jasmine.createSpy("console");
   });
